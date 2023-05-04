@@ -12,31 +12,35 @@ import Blogs from './layout/Blogs/Blogs.jsx';
 import Home from './layout/Home/Home.jsx';
 import Main from './layout/Main/Main.jsx';
 import Login from './layout/Login/Login.jsx';
+import Chef from './layout/Chef/Chef.jsx';
 
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element:<Main></Main> ,
-    children:[
+    element: <Main></Main>,
+    children: [
       {
-        path:'/:id',
-       element:<Home></Home>,
-       loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+        path: '/',
+        element: <Home></Home>
       },
-    
       {
-        path:'/blogs',
-        element:<Login></Login>
+        path: '/blogs',
+        element: <Login></Login>
       }
     ]
   },
+  {
+    path: '/chef/:id',
+    element: <Chef></Chef>,
+    loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
+  }
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

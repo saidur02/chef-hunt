@@ -1,19 +1,10 @@
 
-const MainSection = () => {
-    const [chef,setChef] = useState ([])
-
-
-    useEffect( () => {
-        fetch('http://localhost:5000/chef')
-        .then(res => res.json())
-        .then(data => setChef(data))
-        .catch(error => console.error(error))
-
-    },[])
-
+const MainSection = ({chef}) => {
+   
+const {name,experience,likes,img} = chef;
     return (
         <Container>
-           
+           <h2>{name}</h2>
         </Container>
     );
 };
