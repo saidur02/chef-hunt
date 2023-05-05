@@ -4,16 +4,19 @@ import MainSection from '../MainSection/MainSection';
 
 const Chef = () => {
     const {id} = useParams();
-    const chefDetails = useLoaderData();
+    const chefDetails = useLoaderData()
   
    
     return (
         <div>
            
              <h2> Total Chef : {chefDetails.length} </h2>
-            {
-                chefDetails.map(chef =>console.log(chef))
-            }
+             {
+                chefDetails.recipe_list.map(chf => <MainSection
+                key={chf._id}
+                chef={chf}
+                ></MainSection>)
+             }
         </div>
     );
 };

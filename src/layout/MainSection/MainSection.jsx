@@ -1,7 +1,9 @@
+import { Container } from "react-bootstrap";
 
-const MainSection = ({chef}) => {
+const MainSection = ({chf}) => {
+    console.log(chf)
    
-const {name,experience,likes,img} = chef;
+const {name} = chf;
     return (
         <Container>
            <h2>{name}</h2>
