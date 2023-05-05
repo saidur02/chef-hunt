@@ -13,7 +13,7 @@ const Registration = () => {
         const password = form.password.value;
 
         console.log(name,email,photo,password);
-        createUser(email, password)
+        createUser(email, password);
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
