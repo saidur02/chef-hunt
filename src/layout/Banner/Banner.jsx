@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className="d-flex justify-content-between">
 
-            <div >
+            <div className='text-center mt-5' >
                 <h2>Here Some Best Chef Details</h2>
             </div>
             <img src={banner} alt="" />

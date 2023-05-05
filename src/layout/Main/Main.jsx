@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Outlet } from 'react-router-dom';
 import Header from '../Shared/Nav/Navbar';
+import Footer from '../Shared/Nav/Footer';
 
 
 const Main = () => {
@@ -9,7 +10,7 @@ const Main = () => {
         <div>
           <Header></Header>
           <Outlet></Outlet>
-                  
+               <Footer></Footer>   
         </div>
     );
 };

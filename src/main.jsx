@@ -8,11 +8,13 @@ import {
 } from "react-router-dom";
 
 
-import Blogs from './layout/Blogs/Blogs.jsx';
+
 import Home from './layout/Home/Home.jsx';
 import Main from './layout/Main/Main.jsx';
 import Login from './layout/Login/Login.jsx';
 import Chef from './layout/Chef/Chef.jsx';
+import Blogs from './layout/Blogs.jsx';
+import Registration from './layout/Registration.jsx';
 
 
 
@@ -27,14 +29,23 @@ const router = createBrowserRouter([
       },
       {
         path: '/blogs',
-        element: <Login></Login>
+        element: <Blogs></Blogs>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>,
+
+      },
+      {
+        path:'/registration',
+        element:<Registration></Registration>
       }
     ]
   },
   {
     path: '/chef/:id',
     element: <Chef></Chef>,
-    loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
+    loader: ({ params }) => fetch(`https://chef-server-orcin.vercel.app/chef/${params.id}`)
   }
 ]);
 
