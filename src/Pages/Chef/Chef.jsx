@@ -21,11 +21,6 @@ const Chef = () => {
 
 
 
-
-
-
-
-
     return (
         <div className='grid md:grid-cols-3 gap-5'>
             {
