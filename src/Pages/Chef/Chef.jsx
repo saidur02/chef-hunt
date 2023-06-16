@@ -3,8 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import MainSection from '../MainSection/MainSection';
 
 const Chef = () => {
-    const { id } = useParams();
-    const chefDetails = useLoaderData()
+
     const [chefs, setChefs] = useState([])
 
     useEffect(() => {
@@ -15,10 +14,6 @@ const Chef = () => {
                 setChefs(data)
             })
     }, [])
-
-
-
-
 
 
     return (
