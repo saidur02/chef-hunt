@@ -1,8 +1,8 @@
 
 import { Container } from 'react-bootstrap';
-import Banner from '../Banner/Banner';
 import React, { useEffect, useState } from 'react'
-import MainSection from '../MainSection/MainSection';
+import Banner from '../Banner/Banner';
+import Chef from '../../Chef/Chef';
 
 
 
@@ -25,12 +25,8 @@ const Home = () => {
    
     return (
         <Container>
-            <div>
-            <Banner></Banner>         
-            </div>
-            <div>
-               <MainSection></MainSection>
-            </div>
+           <Banner></Banner>
+           <Chef></Chef>
         </Container>
     );
 };

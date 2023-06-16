@@ -6,15 +6,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-
-
-import Home from './layout/Home/Home.jsx';
+import Home from './Pages/Home/Home/Home.jsx';
+import Blogs from './Pages/Blogs/Blogs.jsx';
+import Login from './Pages/Login/Login.jsx';
+import Registration from './Pages/SignUp/Registration.jsx';
+import Chef from './Pages/Chef/Chef.jsx';
 import Main from './layout/Main/Main.jsx';
-import Login from './layout/Login/Login.jsx';
-import Chef from './layout/Chef/Chef.jsx';
-import Blogs from './layout/Blogs.jsx';
-import Registration from './layout/Registration.jsx';
+import AuthProvider from './Provider/AuthProvider.jsx';
+
 
 
 
@@ -33,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/login',
-        element:<Login></Login>,
+        element:<Login></Login>
 
       },
       {
@@ -52,6 +51,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
